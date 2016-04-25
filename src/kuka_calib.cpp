@@ -167,9 +167,9 @@ std::sprintf(iamgeName, "Image%02d.png", poseNumber);
 std::sprintf(fileName, "%s_%f.csv",calib_data_file.c_str(),fileID);
 
 std::string path= ros::package::getPath("kuka_camera_calib");
-path =path+ "/Calibration/Images/";
+path =path+ "/Calibration/";
 //printf("PATH: %s \n",path.c_str());
-imwrite(path+iamgeName, chess_image); // A PNG FILE IS BEING SAVED
+imwrite(path+"Images/"+iamgeName, chess_image); // A PNG FILE IS BEING SAVED
 
 myfile.open ((path+fileName).c_str(), std::fstream::app);
 myfile << buffer;

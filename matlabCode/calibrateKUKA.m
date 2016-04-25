@@ -1,6 +1,7 @@
 function TBase=calibrateKUKA(filename,squareSize)
 % Script to find transformation
 %% Initialize variables.
+clc;
 delimiter = ',';
 formatSpec = '%f%f%f%f%f%f%f%[^\n\r]';
 %% Open the text file.
@@ -17,7 +18,11 @@ armMat=zeros(4,4);
 poseMatrix = [dataArray{1:end-1}];
 
 for pose=1:size(poseMatrix,1)
- %% Construct the Rotation Matrix:
+    if(pose~=poseMatrix(pose,1)) % the order is not correct
+         error('Please check the calibration file is arranged in order starting from pose 1');
+    return 
+    end
+%% Construct the Rotation Matrix:
 R = rotz(deg2rad(poseMatrix(pose,5)))*roty(deg2rad(poseMatrix(pose,6)))*rotx(deg2rad(poseMatrix(pose,7)));
 %% Construct the translation: (given in mm)
 T = [poseMatrix(pose,2)/1000, poseMatrix(pose,3)/1000, poseMatrix(pose,4)/1000];
@@ -45,14 +50,6 @@ disp(cameraParams.RadialDistortion);
 
 fprintf('Final camera tangential distortion parameters are\n')
 disp(cameraParams.TangentialDistortion);
-
-figure(1);
-clf;
- trplot(eye(4),'frame','C','color','b','length',0.8);
-hold on;
-tranimate(TBase,'frame','B','color','r','length',0.8);
-hold off;
-
 end
 
 
