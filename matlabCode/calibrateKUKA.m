@@ -1,4 +1,4 @@
-function TBase=calibrateKUKA(filename,squareSize)
+function [TBase, TEnd, cameraParams, TBaseStd, TEndStd, pixelErr]=calibrateKUKA(filename,squareSize)
 % Script to find transformation
 %% Initialize variables.
 clc;
