@@ -55,10 +55,14 @@ Add the [CameraCalib.jave](https://github.com/elhussieny/kuka_camera_calib/tree/
 
 2. Wait till the code finished and check these outputs:
 
-**TBase**- The camera to arm base transformation.
-**TEnd**- The end effector to checkerboard transformation.
-**cameraParams**- The intrinsic parameters of the camera used.
-**TBaseStd**- An estimation of the standard deviation of the error in the values in TBase.
-**TBaseStd**- An estimation of the standard. deviation of the error in the values in TEnd.
-**pixelErr**- Mean error of projected inliers in pixels.
+    **TBase**- The camera to arm base transformation.
+    
+    **TEnd**- The end effector to checkerboard transformation.
+    
+    **cameraParams**- The intrinsic parameters of the camera used.
 
+    **TBaseStd**- An estimation of the standard deviation of the error in the values in TBase.
+
+    **TBaseStd**- An estimation of the standard. deviation of the error in the values in TEnd.
+
+    **pixelErr**- Mean error of projected inliers in pixels.
