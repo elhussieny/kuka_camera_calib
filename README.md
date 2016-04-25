@@ -21,19 +21,19 @@ git clone https://github.com/elhussieny/kuka_camera_calib
 ```
 
 3. catkin_make the workspace:
-```
-catkin_make
-```
+	```
+	catkin_make
+	```
 4. Creat an empty directory *Calibration/Images* inside the kuka_camera_calib directory:
-```
-mkdir -p Calibration/Images
-```
+	```
+	mkdir -p Calibration/Images
+	```
 5. Run the image streaming node; for example kinect2 bridge that will publish image topics:
-```
-roslaunch kinect2_bridge kinect2_bridge
-```
+	```
+	roslaunch kinect2_bridge kinect2_bridge
+	```
 
 6. Run the kuka_camera_calib node:
-```
-rosrun kuka_camera_calib kuka_calib
-```
+	```
+	rosrun kuka_camera_calib kuka_calib
+	```
