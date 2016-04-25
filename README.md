@@ -47,12 +47,12 @@ Add the [CameraCalib.jave](https://github.com/elhussieny/kuka_camera_calib/tree/
 1. Open MATLAB 8.0+ and jump to the **kuka_camera_calib/matlabCode/** and run the following command in the matlab command window:
 
     ```
-    calibrateKUKA  ('filename.csv',chess_square_ width_in_mm)
+    calibrateKUKA('filename.csv',chess_square_ width_in_mm)
     ``` 
 
     for instance, invoke it in this way:
     ```
-    calibrateKUKA   ('calib_1461440868.500580.csv',27.5)
+    calibrateKUKA('calib_1461440868.500580.csv',27.5)
     ``` 
 
 2. Wait till the code finished and check these outputs:
