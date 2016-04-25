@@ -4,6 +4,8 @@ This package is a ROS extension for the [Camera-to-Arm tool](https://github.com/
 <!--more-->
 This package is mainly implemented for KUKA LBR iiwa R820. But theoretically it can be modified with ease to fit any manipulator. Just change the image topic name and find a way to transmit a pose at each calibration view.
 
+For video explanation visit [Youtube video.](https://youtu.be/D91M5uVJbXE)
+
 
 ### *To run on KUKA LBR R820:*
 
